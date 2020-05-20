@@ -8,7 +8,7 @@ Video tutorial here: [https://www.youtube.com/watch?v=UJk1bwBAPmc](https://www.y
 
 ## Table of Contents
 
-* 0:00:21 - Install Zeebe Modeler
+* 0:00:21 - Install [Zeebe Modeler](https://github.com/zeebe-io/zeebe-modeler)
 * 0:01:02 - Get a Camunda Cloud account ([https://camunda.io](https://camunda.io))
 
 * 0:02:17 - Create a new Zeebe cluster
@@ -29,7 +29,7 @@ Video tutorial here: [https://www.youtube.com/watch?v=UJk1bwBAPmc](https://www.y
 
 * 0:13:20 - Connecting to the cluster from Node.js
 
-* 0:15:55 - Creating a BPM Model using Zeebe Modeler
+* 0:15:55 - Creating a BPM Model using [Zeebe Modeler](https://github.com/zeebe-io/zeebe-modeler)
 * 0:17:39 - Deploying a model to the cluster from Node.js 
 
 * 0:19:47 - Viewing workflows in Operate on Camunda Cloud
@@ -66,7 +66,7 @@ npm init -y
 tsc --init
 ```
 
-* Edit `tsconfig.json`:
+* Edit `tsconfig.json` with the following config:
 
 ```
 {
@@ -84,7 +84,7 @@ tsc --init
 }
 ```
 
-* Install zeebe-node and dotenv:
+* Install `zeebe-node` and `dotenv`:
 
 ```
 pnpm i zeebe-node dotenv
@@ -93,9 +93,9 @@ pnpm i zeebe-node dotenv
 ## Create Camunda Cloud cluster
 
 * Log in to [https://camunda.io](https://camunda.io)
-* Create a new Zeebe cluster 
-* When it appears in the console, create a new set of client credentials 
-* Copy the connection environment variables block
+* Create a new Zeebe 0.23.1 cluster 
+* When the new cluster appears in the console, create a new set of client credentials 
+* Copy the client connection environment variables block
 
 ## Configure connection
 
