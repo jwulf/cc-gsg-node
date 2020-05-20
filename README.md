@@ -7,7 +7,7 @@ Video tutorial here: [https://www.youtube.com/watch?v=UJk1bwBAPmc](https://www.y
 * [Node.js 14.2.0](https://nodejs.org)
 
 ## Table of Contents
-_Note: Available as clickable links in the YouTube video_
+_Note: Available as clickable links in the [YouTube video](https://www.youtube.com/watch?v=UJk1bwBAPmc)_
 
 * 0:00:21 - Install [Zeebe Modeler](https://github.com/zeebe-io/zeebe-modeler)
 * 0:01:02 - Get a Camunda Cloud account ([https://camunda.io](https://camunda.io))
