@@ -6,8 +6,9 @@ require("dotenv").config();
 
 async function deployModel(zbc) {
   const bpmn = path.join(__dirname, "..", "bpmn", "test-process.bpmn");
+  // const bpmn = path.join(__dirname, "..", "bpmn", "diagram_2.bpmn");
   const res = await zbc.deployWorkflow(bpmn);
-  //   console.log(res);
+  // console.log(res);
 }
 
 async function createProcessInstance(zbc) {
@@ -20,10 +21,13 @@ async function createProcessInstance(zbc) {
 async function main() {
   const zbc = new ZBClient();
   await deployModel(zbc);
-  createProcessInstance(zbc);
+  const res = await zbc.createWorkflowInstanceWithResult("test-process", {});
 
-  createRESTTimeWorker(zbc);
-  createMakeGreetingWorker(zbc);
+  // createRESTTimeWorker(zbc);
+  // createMakeGreetingWorker(zbc);
+  // await new Promise((res) => setTimeout(() => res(), 4000));
+
+  createProcessInstance(zbc);
 }
 
 main();
@@ -46,9 +50,9 @@ function createRESTTimeWorker(zbc: ZBClient) {
   const worker = zbc.createWorker({
     taskType: "get-time",
     taskHandler: async (job, complete) => {
-      const res = await got(url).json();
-      console.log(res);
-      complete.success({ time: res });
+      const time = await got(url).json();
+      console.log(time);
+      complete.success({ time });
     },
   });
 }
